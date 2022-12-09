@@ -1,0 +1,22 @@
+﻿@page "/signin"
+
+
+<div class="sign-form">
+    <p class="welcom-text"> User - Today is @Day!</p>
+    <input type="text" class="sign-input form-control" placeholder="Username"/>
+    <input type="password" class="sign-input form-control" placeholder="Password" />
+
+    <button class="sign-button btn btn-primary" type="submit">Sign in</button>
+
+    <div class="signup">
+        <a href="/signup">Sign Up</a>
+    </div>
+
+
+</div>
+
+
+
+@code {
+    public string Day { get; set; } = DateTime.Now.DayOfWeek.ToString();
+}
